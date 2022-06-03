@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>equipment-taglib</short-name>
+  <uri>/WEB-INF/tlds/Equipment-taglib</uri>
+  <!-- A validator verifies that the tags are used correctly at JSP
+          translation time. Validator entries look like this: 
+       <validator>
+           <validator-class>com.mycompany.TagLibValidator</validator-class>
+           <init-param>
+              <param-name>parameter</param-name>
+              <param-value>value</param-value>
+           </init-param>
+       </validator>
+    -->
+  <!-- A tag library can register Servlet Context event listeners in
+         case it needs to react to such events. Listener entries look
+         like this: 
+      <listener>
+          <listener-class>com.mycompany.TagLibListener</listener-class> 
+      </listener>
+    -->
+  <tag>
+    <name>listEquipmentType</name>
+    <tag-class>ict.tag.ListEquipmentTypeTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>ListEquipmentSelectionTag</name>
+    <tag-class>ict.tag.ListEquipmentSelectionTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>ListAllEquipment</name>
+    <tag-class>ict.tag.ListAllEquipment</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>ListSelectedEquipment</name>
+    <tag-class>ict.tag.ListSelectedEquipment</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>equipmentsID</name>
+      <required>true</required>
+      <type>java.lang.Object</type>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>DisableDate</name>
+    <tag-class>ict.tag.DisableDate</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>equipmentsID</name>
+      <required>true</required>
+      <type>java.lang.Object</type>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>ListPersonalBorrowingRecordTag</name>
+    <tag-class>ict.tag.ListPersonalBorrowingRecordTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>userID</name>
+      <required>true</required>
+      <type>java.lang.String</type>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>ListRequestNoProcessed</name>
+    <tag-class>ict.tag.ListRequestNoProcessed</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>GetLateData</name>
+    <tag-class>ict.tag.GetLateData</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>userID</name>
+      <required>true</required>
+      <type>java.lang.String</type>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>ListLatedRequestAndEquipment</name>
+    <tag-class>ict.tag.ListLatedRequestAndEquipment</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+</taglib>
